@@ -68,6 +68,7 @@ import javax.swing.Action;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRMapArrayDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
@@ -2086,6 +2087,15 @@ if (pickupSize!=null && (Integer.parseInt(pickupSize) >= tmpPickupId.length())){
         m_jList.setMinimumSize(new java.awt.Dimension(42, 36));
         m_jList.setPreferredSize(new java.awt.Dimension(50, 36));
         m_jList.setRequestFocusEnabled(false);
+        Action abrirConsulta = new AbstractAction() {
+            private static final long serialVersionUID = 1L;
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m_jListActionPerformed(evt);
+            }
+        };
+        m_jList.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("B"),
+            "abrirConsulta");
+        m_jList.getActionMap().put("abrirConsulta", abrirConsulta);
         m_jList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 m_jListActionPerformed(evt);

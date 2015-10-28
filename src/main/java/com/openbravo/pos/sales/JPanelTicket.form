@@ -442,6 +442,9 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="m_jListActionPerformed"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="Action abrirConsulta = new AbstractAction() {&#xa;            private static final long serialVersionUID = 1L;&#xa;            public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;                m_jListActionPerformed(evt);&#xa;            }&#xa;        };&#xa;        m_jList.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(&quot;B&quot;),&#xa;            &quot;abrirConsulta&quot;);&#xa;        m_jList.getActionMap().put(&quot;abrirConsulta&quot;, abrirConsulta);"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JButton" name="m_jEditLine">
                       <Properties>

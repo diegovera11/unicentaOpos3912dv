@@ -28,7 +28,11 @@ import com.openbravo.pos.ticket.ProductFilterSales;
 import com.openbravo.pos.ticket.ProductInfoExt;
 import com.openbravo.pos.ticket.ProductRenderer;
 import java.awt.*;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.KeyStroke;
 
 /**
  *
@@ -194,6 +198,20 @@ public class JProductFinder extends javax.swing.JDialog {
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/ok.png"))); // NOI18N
         jButton3.setText(AppLocal.getIntString("button.executefilter")); // NOI18N
         jButton3.setToolTipText("Execute Filter");
+        Action ejecutarConsulta = new AbstractAction() {
+            private static final long serialVersionUID = 1L;
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        };
+        jButton3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("ENTER"),
+            "ejecutarConsulta");
+        jButton3.getActionMap().put("ejecutarConsulta", ejecutarConsulta);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -252,6 +270,21 @@ public class JProductFinder extends javax.swing.JDialog {
         jcmdOK.setMaximumSize(new java.awt.Dimension(103, 44));
         jcmdOK.setMinimumSize(new java.awt.Dimension(103, 44));
         jcmdOK.setPreferredSize(new java.awt.Dimension(103, 44));
+        Action aceptarProducto = new AbstractAction() {
+            private static final long serialVersionUID = 1L;
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcmdOKActionPerformed(evt);
+            }
+        };
+        jcmdOK.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke("ENTER"),
+            "aceptarProducto");
+        jcmdOK.getActionMap().put("aceptarProducto", aceptarProducto);
+
+        jcmdOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcmdOKActionPerformed(evt);
+            }
+        });
         jcmdOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcmdOKActionPerformed(evt);

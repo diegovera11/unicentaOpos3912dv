@@ -87,6 +87,9 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="Action ejecutarConsulta = new AbstractAction() {&#xa;            private static final long serialVersionUID = 1L;&#xa;            public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;                jButton3ActionPerformed(evt);&#xa;            }&#xa;        };&#xa;        jButton3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(&quot;ENTER&quot;),&#xa;            &quot;ejecutarConsulta&quot;);&#xa;        jButton3.getActionMap().put(&quot;ejecutarConsulta&quot;, ejecutarConsulta);&#xa;        jButton3.addActionListener(new java.awt.event.ActionListener() {&#xa;            public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;                jButton3ActionPerformed(evt);&#xa;            }&#xa;        });"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -203,6 +206,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcmdOKActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="Action aceptarProducto = new AbstractAction() {&#xa;            private static final long serialVersionUID = 1L;&#xa;            public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;                jcmdOKActionPerformed(evt);&#xa;            }&#xa;        };&#xa;        jcmdOK.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(&quot;ENTER&quot;),&#xa;            &quot;aceptarProducto&quot;);&#xa;        jcmdOK.getActionMap().put(&quot;aceptarProducto&quot;, aceptarProducto);&#xa;&#xa;        jcmdOK.addActionListener(new java.awt.event.ActionListener() {&#xa;            public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;                jcmdOKActionPerformed(evt);&#xa;            }&#xa;        });"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
